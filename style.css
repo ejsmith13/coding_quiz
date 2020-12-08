@@ -1,0 +1,30 @@
+header {
+  width: 95%;
+  margin: 2%;
+  padding: 5px;
+  color: #eeeeee;
+  background-color: gray;
+}
+
+h1 {
+  text-align: center;
+}
+
+.scores {
+  float: left;
+}
+
+.timer {
+  float: right;
+  text-align: right;
+}
+
+.container {
+  clear: both;
+  margin: auto 50%;
+}
+
+#start {
+    background-color: rgb(176, 15, 224);
+    color: rgb(236, 227, 227);
+}
