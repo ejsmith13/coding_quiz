@@ -10,17 +10,15 @@ h1 {
   text-align: center;
 }
 
-.scores {
-  float: left;
-}
 
 .timer {
-  float: right;
+  
   text-align: right;
-}
+  
+} 
 
-.container {
-  clear: both;
+.main {
+  
   margin: auto 25%;
   width: 50%;
   text-align: center;

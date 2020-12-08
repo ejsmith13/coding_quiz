@@ -1,23 +1,40 @@
+var startQuiz = document.querySelector(".quiz")
 var startBtn = document.querySelector("#start")
 var scores = document.querySelector(".scores")
 var timeLeft = document.querySelector(".timer")
-
+var secondsLeft = 90;
 
 function startDisappear () {
     console.log("Starting Dissappear");
-    startBtn.setAttribute("style", "display: none");
+    startQuiz.setAttribute("style", "display: none");
     startTimer();
 }
 
 function startTimer (){
     console.log("starting Timer");
 
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeLeft.textContent = "Time: " + secondsLeft;
     
-    startQuiz ();
+        if(secondsLeft === 0) {
+          clearInterval(timerInterval);
+          enterScore();
+        }
+    
+      }, 1000);
+
+
+    startQ ();
 }
 
-function startQuiz(){
+function startQ(){
     console.log("startingQuiz")
+
+}
+
+function enterScore() {
+    console.log("enterscore!")
 
 }
 
