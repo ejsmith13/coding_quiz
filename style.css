@@ -10,22 +10,18 @@ h1 {
   text-align: center;
 }
 
-
 .timer {
-  
   text-align: right;
-  
-} 
+}
 
 .main {
-  
   margin: auto 25%;
   width: 50%;
   text-align: center;
 }
 
 #start {
-    margin: auto;
-    background-color: rgb(176, 15, 224);
-    color: rgb(236, 227, 227);
+  margin: auto;
+  background-color: rgb(176, 15, 224);
+  color: rgb(236, 227, 227);
 }
