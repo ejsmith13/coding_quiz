@@ -66,7 +66,23 @@ function startQ() {
   mainSection.appendChild(answerThree);
   mainSection.appendChild(buttonFour);
   mainSection.appendChild(answerFour);
+
+  buttonOne.addEventListener("click", takeTime)
+  buttonTwo.addEventListener("click", takeTime)
+  buttonThree.addEventListener("click", addPoint)
+  buttonFour.addEventListener("click", takeTime)
 }
+
+function addPoint () {
+    score = score + 10;
+    console.log(score);
+}
+
+function takeTime() {
+    secondsLeft = secondsLeft - 10;
+}
+
+
 
 function enterScore() {
   console.log("enterscore!");
