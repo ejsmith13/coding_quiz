@@ -17,6 +17,9 @@ h1 {
 .main {
   margin: auto 25%;
   width: 50%;
+}
+
+.quiz {
   text-align: center;
 }
 
