@@ -86,6 +86,7 @@ function takeTime() {
 
 function enterScore() {
   console.log("enterscore!");
+  window.location.href= "high-scores.html"
 }
 
 startBtn.addEventListener("click", startDisappear);
