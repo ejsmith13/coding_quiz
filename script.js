@@ -3,6 +3,11 @@ var startBtn = document.querySelector("#start");
 var scores = document.querySelector(".scoreList ");
 var timeLeft = document.querySelector(".timer");
 var mainSection= document.querySelector(".main");
+var questionOne = document.createElement("div");
+var answersOne = document.createElement("button");
+var answerTwo = document.createElement("button");
+var answerThree = document.createElement("button");
+var answerFour = document.createElement("button");
 
 var secondsLeft = 90;
 
@@ -34,8 +39,10 @@ function startTimer (){
 
 function startQ(){
     console.log("startingQuiz");
-    button.textContent = "Working";
-    mainSection.appendChild(button);
+
+    questionOne.textContent = "This is an example question; Answer 3"
+    
+    mainSection.appendChild(questionOne);
 
 
 
