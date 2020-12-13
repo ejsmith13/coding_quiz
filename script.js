@@ -44,17 +44,17 @@ function startTimer() {
 function startQ() {
   console.log("startingQuiz");
 
-  questionOne.textContent = "This is an example question; button 3";
+  questionOne.textContent = "Commonly used data types DO NOT include:";
 
-  buttonOne.textContent = "Answer 1";
-  buttonTwo.textContent = "Answer 2";
-  buttonThree.textContent = "Answer 3";
-  buttonFour.textContent = "Answer 4";
+  buttonOne.textContent = "A";
+  buttonTwo.textContent = "B";
+  buttonThree.textContent = "C";
+  buttonFour.textContent = "D";
 
-  answerOne.textContent = "example";
-  answerTwo.textContent = "example";
-  answerThree.textContent = "example";
-  answerFour.textContent = "example";
+  answerOne.textContent = "Strings";
+  answerTwo.textContent = "Booleans";
+  answerThree.textContent = "Alerts";
+  answerFour.textContent = "Numbers";
 
   mainSection.appendChild(questionOne);
 
@@ -87,17 +87,17 @@ function startQ() {
 function startTwo() {
     console.log("starting2");
 
-    questionOne.textContent = "This is an example question; Choose 1";
+    questionOne.textContent = "A boolean has how many possible values?";
   
-    buttonOne.textContent = "Choice 1";
-    buttonTwo.textContent = "Choice 2";
-    buttonThree.textContent = "Choice 3";
-    buttonFour.textContent = "Choice 4";
+    buttonOne.textContent = "A";
+    buttonTwo.textContent = "B";
+    buttonThree.textContent = "C";
+    buttonFour.textContent = "D";
   
-    answerOne.textContent = "example";
-    answerTwo.textContent = "example";
-    answerThree.textContent = "example";
-    answerFour.textContent = "example";
+    answerOne.textContent = "1";
+    answerTwo.textContent = "2";
+    answerThree.textContent = "10";
+    answerFour.textContent = "infinate";
   
     mainSection.appendChild(questionOne);
   
@@ -110,8 +110,8 @@ function startTwo() {
     mainSection.appendChild(buttonFour);
     mainSection.appendChild(answerFour);
   
-    buttonOne.addEventListener("click", addPoint);
-    buttonTwo.addEventListener("click", takeTime);
+    buttonOne.addEventListener("click", takeTime);
+    buttonTwo.addEventListener("click", addPoint);
     buttonThree.addEventListener("click", takeTime);
     buttonFour.addEventListener("click", takeTime);
   
@@ -129,17 +129,17 @@ function startTwo() {
 function startThree(){
     console.log("starting 3");
 
-    questionOne.textContent = "This is an example question; Choose 4";
+    questionOne.textContent = "Which of the following is NOT truthy?";
   
-    buttonOne.textContent = "Choice 1";
-    buttonTwo.textContent = "Choice 2";
-    buttonThree.textContent = "Choice 3";
-    buttonFour.textContent = "Choice 4";
+    buttonOne.textContent = "A";
+    buttonTwo.textContent = "B";
+    buttonThree.textContent = "C";
+    buttonFour.textContent = "D";
   
-    answerOne.textContent = "example";
-    answerTwo.textContent = "example";
-    answerThree.textContent = "example";
-    answerFour.textContent = "example";
+    answerOne.textContent = "42";
+    answerTwo.textContent = "[]";
+    answerThree.textContent = "true";
+    answerFour.textContent = "null";
   
     mainSection.appendChild(questionOne);
   
@@ -171,17 +171,17 @@ function startThree(){
 function startFour() {
     console.log("starting4");
 
-    questionOne.textContent = "This is an example question; Choose 1";
+    questionOne.textContent = "Which of the following is NOT a sematic HTML tag?";
   
-    buttonOne.textContent = "Choice 1";
-    buttonTwo.textContent = "Choice 2";
-    buttonThree.textContent = "Choice 3";
-    buttonFour.textContent = "Choice 4";
+    buttonOne.textContent = "A";
+    buttonTwo.textContent = "B";
+    buttonThree.textContent = "C";
+    buttonFour.textContent = "D";
   
-    answerOne.textContent = "example";
-    answerTwo.textContent = "example";
-    answerThree.textContent = "example";
-    answerFour.textContent = "example";
+    answerOne.textContent = "div";
+    answerTwo.textContent = "aside";
+    answerThree.textContent = "header";
+    answerFour.textContent = "section";
   
     mainSection.appendChild(questionOne);
   
@@ -213,17 +213,17 @@ function startFour() {
 function startFive() {
     console.log("starting5");
 
-    questionOne.textContent = "This is an example question; Choose 2";
+    questionOne.textContent = "Which of the following can be stored in an array?";
   
-    buttonOne.textContent = "Choice 1";
-    buttonTwo.textContent = "Choice 2";
-    buttonThree.textContent = "Choice 3";
-    buttonFour.textContent = "Choice 4";
+    buttonOne.textContent = "A";
+    buttonTwo.textContent = "B";
+    buttonThree.textContent = "C";
+    buttonFour.textContent = "D";
   
-    answerOne.textContent = "example";
-    answerTwo.textContent = "example";
-    answerThree.textContent = "example";
-    answerFour.textContent = "example";
+    answerOne.textContent = "numbers";
+    answerTwo.textContent = "strings";
+    answerThree.textContent = "booleans";
+    answerFour.textContent = "All of the above";
   
     mainSection.appendChild(questionOne);
   
@@ -237,9 +237,9 @@ function startFive() {
     mainSection.appendChild(answerFour);
   
     buttonOne.addEventListener("click", takeTime);
-    buttonTwo.addEventListener("click", addPoint);
+    buttonTwo.addEventListener("click", takeTime);
     buttonThree.addEventListener("click", takeTime);
-    buttonFour.addEventListener("click", takeTime);
+    buttonFour.addEventListener("click", addPoint);
   
     function addPoint() {
       score = score + 10;
