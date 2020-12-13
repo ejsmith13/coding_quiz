@@ -13,54 +13,29 @@
     <title>Coding Quiz</title>
   </head>
   <body>
-    <div class="quizPage">
-      <header>
-        <h1>Test your knowledge</h1>
-      </header>
-      <section class="container">
-        <section class="row">
-          <a class="col-md-6" href="high-scores.html">View High Scores</a>
-          <p class="col-md-6 timer">Time: 90</p>
-        </section>
+    <header>
+      <h1>Test your knowledge</h1>
+    </header>
+    <section class="container">
+      <section class="row">
+        <a class="col-md-6" href="high-scores.html">View High Scores</a>
+        <p class="col-md-6 timer">Time: 90</p>
+      </section>
 
-        <section class="main">
-          <section class="quiz">
-            <h2>Coding Quiz Challenge</h2>
-            <p>
-              Take my quiz to test your coding knowledge! Each correct answer
-              will gain you a point, but any wrong answers will subtract time
-              from the clock. When the timer hits 0 the game is over. Click
-              below to test your knowledge!
-            </p>
-            <input type="button" name="start" value="Start Quiz!" id="start" />
-          </section>
+      <section class="main">
+        <section class="quiz">
+          <h2>Coding Quiz Challenge</h2>
+          <p>
+            Take my quiz to test your coding knowledge! Each correct answer will
+            gain you a point, but any wrong answers will subtract time from the
+            clock. When the timer hits 0 the game is over. Click below to test
+            your knowledge!
+          </p>
+          <input type="button" name="start" value="Start Quiz!" id="start" />
         </section>
       </section>
-    </div>
+    </section>
 
-    <div class="scorePage">
-      <header>
-        <h1>Enter your name!</h1>
-      </header>
-      <section class="container">
-        <section>
-          <input
-            type="text"
-            name="name"
-            placeholder="ex: John Doe"
-            id="scoreName"
-          />
-          <input type="submit" for="name" name="submit" id="scoreSubmit" />
-          <button class="return">Try Again!</button>
-        </section>
-        <section class="row" style="margin-top: 25px">
-          <section class="col-6-md">
-            <h2>High Scores:</h2>
-            <ol class="scoreList"></ol>
-          </section>
-        </section>
-      </section>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>

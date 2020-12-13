@@ -1,5 +1,3 @@
-var quizPage = document.querySelector(".quizPage")
-var scorePage = document.querySelector(".scorePage")
 var startQuiz = document.querySelector(".quiz");
 var startBtn = document.querySelector("#start");
 var scores = document.querySelector(".scoreList ");
@@ -17,16 +15,10 @@ var answerTwo = document.createElement("p");
 var answerThree = document.createElement("p");
 var answerFour = document.createElement("p");
 
-var returnBtn = document.querySelector(".return");
-var scoreBtn = document.querySelector("#scoreSubmit");
-var scoreName = document.querySelector("#scoreName");
-
 var secondsLeft = 90;
 var score = 0;
 
-var button = document.createElement("button");
-
-scorePage.setAttribute("style", "display: none")
+// var button = document.createElement("button");
 
 function startDisappear() {
   console.log("Starting Dissappear");
@@ -94,196 +86,177 @@ function startQ() {
 }
 
 function startTwo() {
-  console.log("starting2");
+    console.log("starting2");
 
-  questionOne.textContent = "This is an example question; Choose 1";
-
-  buttonOne.textContent = "Choice 1";
-  buttonTwo.textContent = "Choice 2";
-  buttonThree.textContent = "Choice 3";
-  buttonFour.textContent = "Choice 4";
-
-  answerOne.textContent = "example";
-  answerTwo.textContent = "example";
-  answerThree.textContent = "example";
-  answerFour.textContent = "example";
-
-  mainSection.appendChild(questionOne);
-
-  mainSection.appendChild(buttonOne);
-  mainSection.appendChild(answerOne);
-  mainSection.appendChild(buttonTwo);
-  mainSection.appendChild(answerTwo);
-  mainSection.appendChild(buttonThree);
-  mainSection.appendChild(answerThree);
-  mainSection.appendChild(buttonFour);
-  mainSection.appendChild(answerFour);
-
-  buttonOne.addEventListener("click", addPoint);
-  buttonTwo.addEventListener("click", takeTime);
-  buttonThree.addEventListener("click", takeTime);
-  buttonFour.addEventListener("click", takeTime);
-
-  function addPoint() {
-    score = score + 10;
-    console.log(score);
-    startThree();
-  }
-
-  function takeTime() {
-    secondsLeft = secondsLeft - 10;
-    startThree();
-  }
+    questionOne.textContent = "This is an example question; Choose 1";
+  
+    buttonOne.textContent = "Choice 1";
+    buttonTwo.textContent = "Choice 2";
+    buttonThree.textContent = "Choice 3";
+    buttonFour.textContent = "Choice 4";
+  
+    answerOne.textContent = "example";
+    answerTwo.textContent = "example";
+    answerThree.textContent = "example";
+    answerFour.textContent = "example";
+  
+    mainSection.appendChild(questionOne);
+  
+    mainSection.appendChild(buttonOne);
+    mainSection.appendChild(answerOne);
+    mainSection.appendChild(buttonTwo);
+    mainSection.appendChild(answerTwo);
+    mainSection.appendChild(buttonThree);
+    mainSection.appendChild(answerThree);
+    mainSection.appendChild(buttonFour);
+    mainSection.appendChild(answerFour);
+  
+    buttonOne.addEventListener("click", addPoint);
+    buttonTwo.addEventListener("click", takeTime);
+    buttonThree.addEventListener("click", takeTime);
+    buttonFour.addEventListener("click", takeTime);
+  
+    function addPoint() {
+      score = score + 10;
+      console.log(score);
+      startThree();
+    }
+  
+    function takeTime() {
+      secondsLeft = secondsLeft - 10;
+      startThree();
+    }
 }
-function startThree() {
-  console.log("starting 3");
+function startThree(){
+    console.log("starting 3");
 
-  questionOne.textContent = "This is an example question; Choose 4";
-
-  buttonOne.textContent = "Choice 1";
-  buttonTwo.textContent = "Choice 2";
-  buttonThree.textContent = "Choice 3";
-  buttonFour.textContent = "Choice 4";
-
-  answerOne.textContent = "example";
-  answerTwo.textContent = "example";
-  answerThree.textContent = "example";
-  answerFour.textContent = "example";
-
-  mainSection.appendChild(questionOne);
-
-  mainSection.appendChild(buttonOne);
-  mainSection.appendChild(answerOne);
-  mainSection.appendChild(buttonTwo);
-  mainSection.appendChild(answerTwo);
-  mainSection.appendChild(buttonThree);
-  mainSection.appendChild(answerThree);
-  mainSection.appendChild(buttonFour);
-  mainSection.appendChild(answerFour);
-
-  buttonOne.addEventListener("click", takeTime);
-  buttonTwo.addEventListener("click", takeTime);
-  buttonThree.addEventListener("click", takeTime);
-  buttonFour.addEventListener("click", addPoint);
-
-  function addPoint() {
-    score = score + 10;
-    console.log(score);
-    startFour();
-  }
-
-  function takeTime() {
-    secondsLeft = secondsLeft - 10;
-    startFour();
-  }
+    questionOne.textContent = "This is an example question; Choose 4";
+  
+    buttonOne.textContent = "Choice 1";
+    buttonTwo.textContent = "Choice 2";
+    buttonThree.textContent = "Choice 3";
+    buttonFour.textContent = "Choice 4";
+  
+    answerOne.textContent = "example";
+    answerTwo.textContent = "example";
+    answerThree.textContent = "example";
+    answerFour.textContent = "example";
+  
+    mainSection.appendChild(questionOne);
+  
+    mainSection.appendChild(buttonOne);
+    mainSection.appendChild(answerOne);
+    mainSection.appendChild(buttonTwo);
+    mainSection.appendChild(answerTwo);
+    mainSection.appendChild(buttonThree);
+    mainSection.appendChild(answerThree);
+    mainSection.appendChild(buttonFour);
+    mainSection.appendChild(answerFour);
+  
+    buttonOne.addEventListener("click", takeTime);
+    buttonTwo.addEventListener("click", takeTime);
+    buttonThree.addEventListener("click", takeTime);
+    buttonFour.addEventListener("click", addPoint);
+  
+    function addPoint() {
+      score = score + 10;
+      console.log(score);
+      startFour();
+    }
+  
+    function takeTime() {
+      secondsLeft = secondsLeft - 10;
+      startFour();
+    }
 }
 function startFour() {
-  console.log("starting4");
+    console.log("starting4");
 
-  questionOne.textContent = "This is an example question; Choose 1";
-
-  buttonOne.textContent = "Choice 1";
-  buttonTwo.textContent = "Choice 2";
-  buttonThree.textContent = "Choice 3";
-  buttonFour.textContent = "Choice 4";
-
-  answerOne.textContent = "example";
-  answerTwo.textContent = "example";
-  answerThree.textContent = "example";
-  answerFour.textContent = "example";
-
-  mainSection.appendChild(questionOne);
-
-  mainSection.appendChild(buttonOne);
-  mainSection.appendChild(answerOne);
-  mainSection.appendChild(buttonTwo);
-  mainSection.appendChild(answerTwo);
-  mainSection.appendChild(buttonThree);
-  mainSection.appendChild(answerThree);
-  mainSection.appendChild(buttonFour);
-  mainSection.appendChild(answerFour);
-
-  buttonOne.addEventListener("click", addPoint);
-  buttonTwo.addEventListener("click", takeTime);
-  buttonThree.addEventListener("click", takeTime);
-  buttonFour.addEventListener("click", takeTime);
-
-  function addPoint() {
-    score = score + 10;
-    console.log(score);
-    startFive();
-  }
-
-  function takeTime() {
-    secondsLeft = secondsLeft - 10;
-    startFive();
-  }
+    questionOne.textContent = "This is an example question; Choose 1";
+  
+    buttonOne.textContent = "Choice 1";
+    buttonTwo.textContent = "Choice 2";
+    buttonThree.textContent = "Choice 3";
+    buttonFour.textContent = "Choice 4";
+  
+    answerOne.textContent = "example";
+    answerTwo.textContent = "example";
+    answerThree.textContent = "example";
+    answerFour.textContent = "example";
+  
+    mainSection.appendChild(questionOne);
+  
+    mainSection.appendChild(buttonOne);
+    mainSection.appendChild(answerOne);
+    mainSection.appendChild(buttonTwo);
+    mainSection.appendChild(answerTwo);
+    mainSection.appendChild(buttonThree);
+    mainSection.appendChild(answerThree);
+    mainSection.appendChild(buttonFour);
+    mainSection.appendChild(answerFour);
+  
+    buttonOne.addEventListener("click", addPoint);
+    buttonTwo.addEventListener("click", takeTime);
+    buttonThree.addEventListener("click", takeTime);
+    buttonFour.addEventListener("click", takeTime);
+  
+    function addPoint() {
+      score = score + 10;
+      console.log(score);
+      startFive();
+    }
+  
+    function takeTime() {
+      secondsLeft = secondsLeft - 10;
+      startFive();
+    }
 }
 function startFive() {
-  console.log("starting5");
+    console.log("starting5");
 
-  questionOne.textContent = "This is an example question; Choose 2";
-
-  buttonOne.textContent = "Choice 1";
-  buttonTwo.textContent = "Choice 2";
-  buttonThree.textContent = "Choice 3";
-  buttonFour.textContent = "Choice 4";
-
-  answerOne.textContent = "example";
-  answerTwo.textContent = "example";
-  answerThree.textContent = "example";
-  answerFour.textContent = "example";
-
-  mainSection.appendChild(questionOne);
-
-  mainSection.appendChild(buttonOne);
-  mainSection.appendChild(answerOne);
-  mainSection.appendChild(buttonTwo);
-  mainSection.appendChild(answerTwo);
-  mainSection.appendChild(buttonThree);
-  mainSection.appendChild(answerThree);
-  mainSection.appendChild(buttonFour);
-  mainSection.appendChild(answerFour);
-
-  buttonOne.addEventListener("click", takeTime);
-  buttonTwo.addEventListener("click", addPoint);
-  buttonThree.addEventListener("click", takeTime);
-  buttonFour.addEventListener("click", takeTime);
-
-  function addPoint() {
-    score = score + 10;
-    console.log(score);
-    enterScore();
-  }
-
-  function takeTime() {
-    secondsLeft = secondsLeft - 10;
-    enterScore();
-  }
+    questionOne.textContent = "This is an example question; Choose 2";
+  
+    buttonOne.textContent = "Choice 1";
+    buttonTwo.textContent = "Choice 2";
+    buttonThree.textContent = "Choice 3";
+    buttonFour.textContent = "Choice 4";
+  
+    answerOne.textContent = "example";
+    answerTwo.textContent = "example";
+    answerThree.textContent = "example";
+    answerFour.textContent = "example";
+  
+    mainSection.appendChild(questionOne);
+  
+    mainSection.appendChild(buttonOne);
+    mainSection.appendChild(answerOne);
+    mainSection.appendChild(buttonTwo);
+    mainSection.appendChild(answerTwo);
+    mainSection.appendChild(buttonThree);
+    mainSection.appendChild(answerThree);
+    mainSection.appendChild(buttonFour);
+    mainSection.appendChild(answerFour);
+  
+    buttonOne.addEventListener("click", takeTime);
+    buttonTwo.addEventListener("click", addPoint);
+    buttonThree.addEventListener("click", takeTime);
+    buttonFour.addEventListener("click", takeTime);
+  
+    function addPoint() {
+      score = score + 10;
+      console.log(score);
+      enterScore();
+    }
+  
+    function takeTime() {
+      secondsLeft = secondsLeft - 10;
+      enterScore();
+    }
 }
 
 function enterScore() {
   console.log("enterscore!");
-  quizPage.setAttribute("style", "display: none");
-  scorePage.setAttribute("style", "display: initial")
-
-//   window.location.href = "high-scores.html";
+  window.location.href = "high-scores.html";
 }
 
-// function replay() {
-//   window.location.href = "text.html";
-// }
-
-function scoreList() {
-  //creating a list item to add to the high scores list.
-  var name = document.createElement("li");
-  //taking the name entered into the input field and assigning it to the list item.
-  name.textContent = scoreName.value;
-  //adding name to highscore list
-  scores.append(name);
-}
-
-
-// returnBtn.addEventListener("click", replay);
-scoreBtn.addEventListener("click", scoreList);
 startBtn.addEventListener("click", startDisappear);
