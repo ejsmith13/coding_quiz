@@ -12,25 +12,26 @@
     <link rel="stylesheet" href="style.css" />
     <title>Code Quiz | High Scorest</title>
   </head>
-  <body>
+  <body class= scorePage>
     <header>
       <h1>Enter your name!</h1>
     </header>
-    <section class="container" >
-      <section >
-        <input  type="text" name="name" placeholder="ex: John Doe" id="scoreName" />
-        <input  type="submit" name="submit" id="scoreSubmit" />
-        <button class= "return">Try Again!</button>
+    <section class="container">
+      <section>
+        <input
+          type="text"
+          name="name"
+          placeholder="ex: John Doe"
+          id="scoreName"
+        />
+        <input type="submit" for="name" name="submit" id="scoreSubmit" />
+        <button class="return">Try Again!</button>
       </section>
-      <section class="row" style= "margin-top: 25px;"> 
-          <section class= "col-6-md">
-              <h2>High Scores:</h2>
-              <ol class= scoreList>
-                  
-
-              </ol>
-          </section>
-
+      <section class="row" style="margin-top: 25px">
+        <section class="col-6-md">
+          <h2>High Scores:</h2>
+          <ol class="scoreList"></ol>
+        </section>
       </section>
     </section>
 
