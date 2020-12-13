@@ -1,6 +1,6 @@
 var startQuiz = document.querySelector(".quiz");
 var startBtn = document.querySelector("#start");
-var scores = document.querySelector(".scoreList ");
+
 var timeLeft = document.querySelector(".timer");
 var mainSection = document.querySelector(".main");
 var questionOne = document.createElement("div");
@@ -18,7 +18,6 @@ var answerFour = document.createElement("p");
 var secondsLeft = 90;
 var score = 0;
 
-// var button = document.createElement("button");
 
 function startDisappear() {
   console.log("Starting Dissappear");
