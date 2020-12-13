@@ -5,16 +5,16 @@ var scoreboard = document.querySelector(".scoreboard");
 var timeLeft = document.querySelector(".timer");
 var mainSection = document.querySelector(".main");
 var questionOne = document.createElement("div");
+//buttons for answers
+var button1 = document.createElement("button");
+var button2 = document.createElement("button");
+var button3 = document.createElement("button");
+var button4 = document.createElement("button");
 
-var buttonOne = document.createElement("button");
-var buttonTwo = document.createElement("button");
-var buttonThree = document.createElement("button");
-var buttonFour = document.createElement("button");
-
-var buttonFive = document.createElement("button");
-var buttonSix = document.createElement("button");
-var buttonSeven = document.createElement("button");
-var buttonEight = document.createElement("button");
+var button5 = document.createElement("button");
+var button6 = document.createElement("button");
+var button7 = document.createElement("button");
+var button8 = document.createElement("button");
 
 var button9 = document.createElement("button");
 var button10 = document.createElement("button");
@@ -30,7 +30,7 @@ var button17 = document.createElement("button");
 var button18 = document.createElement("button");
 var button19 = document.createElement("button");
 var button20 = document.createElement("button");
-
+//answer options
 var answerOne = document.createElement("p");
 var answerTwo = document.createElement("p");
 var answerThree = document.createElement("p");
@@ -47,11 +47,11 @@ function startDisappear() {
 
 function startTimer() {
   console.log("starting Timer");
-
+  //time interval takes one second off clock and displays it to user
   var timerInterval = setInterval(function () {
     secondsLeft--;
     timeLeft.textContent = "Time: " + secondsLeft;
-
+    //if statement to stop clock if it reaches 0 or below and goes to score page.
     if (secondsLeft === 0 || secondsLeft < 0) {
       clearInterval(timerInterval);
       enterScore();
@@ -63,44 +63,44 @@ function startTimer() {
 
 function startQ() {
   console.log("startingQuiz");
-
+  //questions
   questionOne.textContent = "Commonly used data types DO NOT include:";
-
-  buttonOne.textContent = "A";
-  buttonTwo.textContent = "B";
-  buttonThree.textContent = "C";
-  buttonFour.textContent = "D";
-
+  //text for each button
+  button1.textContent = "A";
+  button2.textContent = "B";
+  button3.textContent = "C";
+  button4.textContent = "D";
+  //anser choices
   answerOne.textContent = "Strings";
   answerTwo.textContent = "Booleans";
   answerThree.textContent = "Alerts";
   answerFour.textContent = "Numbers";
-
+  //creating a question within the document
   mainSection.append(questionOne);
-
-  mainSection.append(buttonOne);
+  //adding answers options and buttons to choose them
+  mainSection.append(button1);
   mainSection.append(answerOne);
-  mainSection.append(buttonTwo);
+  mainSection.append(button2);
   mainSection.append(answerTwo);
-  mainSection.append(buttonThree);
+  mainSection.append(button3);
   mainSection.append(answerThree);
-  mainSection.append(buttonFour);
+  mainSection.append(button4);
   mainSection.append(answerFour);
-
-  buttonOne.addEventListener("click", takeTime);
-  buttonTwo.addEventListener("click", takeTime);
-  buttonThree.addEventListener("click", addPoint);
-  buttonFour.addEventListener("click", takeTime);
+  //eventlisteners for each button either take time away or give points when clicked
+  button1.addEventListener("click", takeTime);
+  button2.addEventListener("click", takeTime);
+  button3.addEventListener("click", addPoint);
+  button4.addEventListener("click", takeTime);
 
   //shows score to user
   scoreboard.textContent = "Score: " + score;
-
+  //function to add points to score and go to next question
   function addPoint() {
     score = score + 10;
     console.log(score);
     startTwo();
   }
-
+  //function that subtracts 10 seconds from clock if the wrong answer is chosen and go to next question.
   function takeTime() {
     secondsLeft = secondsLeft - 10;
     startTwo();
@@ -112,15 +112,15 @@ function startTwo() {
 
   questionOne.textContent = "A boolean has how many possible values?";
 
-  buttonOne.remove();
-  buttonTwo.remove();
-  buttonThree.remove();
-  buttonFour.remove();
+  button1.remove();
+  button2.remove();
+  button3.remove();
+  button4.remove();
 
-  buttonFive.textContent = "A";
-  buttonSix.textContent = "B";
-  buttonSeven.textContent = "C";
-  buttonEight.textContent = "D";
+  button5.textContent = "A";
+  button6.textContent = "B";
+  button7.textContent = "C";
+  button8.textContent = "D";
 
   answerOne.textContent = "1";
   answerTwo.textContent = "2";
@@ -129,19 +129,19 @@ function startTwo() {
 
   mainSection.append(questionOne);
 
-  mainSection.append(buttonFive);
+  mainSection.append(button5);
   mainSection.append(answerOne);
-  mainSection.append(buttonSix);
+  mainSection.append(button6);
   mainSection.append(answerTwo);
-  mainSection.append(buttonSeven);
+  mainSection.append(button7);
   mainSection.append(answerThree);
-  mainSection.append(buttonEight);
+  mainSection.append(button8);
   mainSection.append(answerFour);
 
-  buttonFive.addEventListener("click", takeTime);
-  buttonSix.addEventListener("click", addPoint);
-  buttonSeven.addEventListener("click", takeTime);
-  buttonEight.addEventListener("click", takeTime);
+  button5.addEventListener("click", takeTime);
+  button6.addEventListener("click", addPoint);
+  button7.addEventListener("click", takeTime);
+  button8.addEventListener("click", takeTime);
 
   //shows score to user
   scoreboard.textContent = "Score: " + score;
@@ -162,10 +162,10 @@ function startThree() {
 
   questionOne.textContent = "Which of the following is NOT truthy?";
 
-  buttonFive.remove();
-  buttonSix.remove();
-  buttonSeven.remove();
-  buttonEight.remove();
+  button5.remove();
+  button6.remove();
+  button7.remove();
+  button8.remove();
 
   button9.textContent = "A";
   button10.textContent = "B";
