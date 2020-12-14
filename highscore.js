@@ -10,6 +10,7 @@ function replay() {
 
 function clearNames() {
   localStorage.clear();
+  scores.remove();
 }
 
 function scoreList() {
