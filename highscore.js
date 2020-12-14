@@ -4,10 +4,19 @@ var scoreName = document.querySelector("#scoreName");
 var scores = document.querySelector(".scoreList ");
 
 function replay() {
-  window.location.href = "text.html";
+  window.location.href = "index.html";
 }
 
 function scoreList() {
+
+  var user = {
+
+    console.log(score)
+    Name: scoreName.value.trim(),
+    score: score,
+    
+  };
+
   //creating a list item to add to the high scores list.
   var name = document.createElement("li");
   // name submited through input
