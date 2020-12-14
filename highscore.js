@@ -8,34 +8,33 @@ function replay() {
   window.location.href = "index.html";
 }
 
-function clearNames () {
+function clearNames() {
   localStorage.clear();
 }
 
 function scoreList() {
+  //object to store name and score of user
   var user = {
     firstName: scoreName.value.trim(),
     score: localStorage.getItem("count"),
   };
-
-  //creating a list item to add to the high scores list.
+  //creates list item for highscore list
   var name = document.createElement("li");
-  // name submited through input
-  // var highName = scoreName.value;
-  //storing names
+  //storing user object in local storage
   localStorage.setItem("user", JSON.stringify(user));
-  //gets name from storage
+  //set variable to get info out of local storage
   var postedName = JSON.parse(localStorage.getItem("user"));
-  //gets score from game
-  // var highscores = localStorage.getItem("count");
-
-  //taking the name entered into the input field and assigning it to the list item.
+  //giving content to list items
   name.textContent = postedName.firstName + " " + postedName.score;
 
   //adding name to highscore list
   scores.append(name);
+  scoreName.remove();
+  nameBtn.remove();
 }
 
-clear.addEventListener("click", clearNames)
+
+
+clear.addEventListener("click", clearNames);
 returnBtn.addEventListener("click", replay);
 nameBtn.addEventListener("click", scoreList);
