@@ -312,6 +312,7 @@ function startFive() {
 
 function enterScore() {
   console.log("enterscore!");
+  localStorage.setItem("count", score);
   window.location.href = "high-scores.html";
 }
 
