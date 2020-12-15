@@ -10,4 +10,6 @@ https://github.com/ejsmith13/coding_quiz
 Deployed site:
 https://ejsmith13.github.io/coding_quiz/index.html
 
-![alt text]
+![alt text](assets/images/screenshot_quiz1.png)
+![alt text](assets/images/screenshot_quiz2.png)
+![alt text](assets/images/screenshot_quiz3.png)
